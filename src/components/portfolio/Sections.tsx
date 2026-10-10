@@ -1,4 +1,4 @@
-import { Box, Github, Layout, Linkedin, Mail, Server, ArrowRight } from "lucide-react";
+import { Box, Github, Layout, Linkedin, Mail, Server, ArrowRight , FileDown } from "lucide-react";
 import { profile, projects, skills } from "./data";
 import { Reveal, SectionTitle } from "./Reveal";
 
@@ -31,6 +31,18 @@ export function Hero() {
       <div className="grid-bg absolute inset-0" />
       <div className="absolute left-1/2 top-1/3 h-96 w-96 -translate-x-1/2 rounded-full bg-primary-glow/25 blur-3xl" />
       <Reveal className="relative mx-auto flex min-h-[85vh] max-w-4xl flex-col items-center justify-center px-6 text-center">
+        
+        {/* --- FOTO DE PERFIL AQUÍ --- */}
+        <div className="relative mb-6">
+          <div className="absolute -inset-1 rounded-full bg-gradient-primary opacity-50 blur-md"></div>
+          <img 
+            src="public\yo.jpg" /* Reemplaza con la ruta de tu foto (ej. guardada en la carpeta public) */
+            alt="Manuel" 
+            className="relative h-28 w-28 rounded-full border-2 border-background object-cover shadow-xl md:h-32 md:w-32"
+          />
+        </div>
+        {/* --------------------------- */}
+
         <span className="mb-6 rounded-full border border-border bg-card px-4 py-1 font-mono text-xs text-accent-foreground">
           @RestController · open to work
         </span>
@@ -48,6 +60,9 @@ export function Hero() {
           </a>
           <a href="#contact" className="rounded-lg border border-primary/40 px-6 py-3 font-semibold text-primary transition-colors hover:bg-primary/10">
             Contact Me
+          </a>
+          <a href="/CRRCLM.pdf" download="CRRCLM.pdf" className=" inline-flex items-center gap-2 rounded-lg border border-primary/40 px-6 py-3 font-semibold text-primary transition-colors hover:bg-primary/10">
+             Download CV <FileDown size={18}/>
           </a>
         </div>
       </Reveal>
