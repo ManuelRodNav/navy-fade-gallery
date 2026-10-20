@@ -63,6 +63,9 @@ export function Hero() {
           <a href="/CRRCLM.pdf" download="CRRCLM.pdf" className="inline-flex items-center gap-2 rounded-lg border border-primary/40 px-6 py-3 font-semibold text-primary transition-colors hover:bg-primary/10">
              Download CV <FileDown size={18}/>
           </a>
+                    <a href="/manueleuro.pdf" download="manueleuropass.pdf" className="inline-flex items-center gap-2 rounded-lg border border-primary/40 px-6 py-3 font-semibold text-primary transition-colors hover:bg-primary/10">
+             Download EUROPASS <FileDown size={18}/>
+          </a>
         </div>
       </Reveal>
     </section>
