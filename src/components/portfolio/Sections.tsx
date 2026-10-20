@@ -1,8 +1,8 @@
-import { Box, Github, Layout, Linkedin, Mail, Server, ArrowRight , FileDown } from "lucide-react";
+import { Box, Github, Layout, Linkedin, Mail, Server, ArrowRight, FileDown } from "lucide-react";
 import { profile, projects, skills } from "./data";
 import { Reveal, SectionTitle } from "./Reveal";
 
-const links = ["About", "Skills", "Projects", "Contact"];
+const links = ["About", "Skills", "Projects", "Video", "Contact"];
 
 export function Navbar() {
   return (
@@ -32,16 +32,15 @@ export function Hero() {
       <div className="absolute left-1/2 top-1/3 h-96 w-96 -translate-x-1/2 rounded-full bg-primary-glow/25 blur-3xl" />
       <Reveal className="relative mx-auto flex min-h-[85vh] max-w-4xl flex-col items-center justify-center px-6 text-center">
         
-        {/* --- FOTO DE PERFIL AQUÍ --- */}
+        {/* --- FOTO DE PERFIL --- */}
         <div className="relative mb-6">
           <div className="absolute -inset-1 rounded-full bg-gradient-primary opacity-50 blur-md"></div>
           <img 
-            src="public\yo.jpg" /* Reemplaza con la ruta de tu foto (ej. guardada en la carpeta public) */
+            src="/yo.jpg" 
             alt="Manuel" 
             className="relative h-28 w-28 rounded-full border-2 border-background object-cover shadow-xl md:h-32 md:w-32"
           />
         </div>
-        {/* --------------------------- */}
 
         <span className="mb-6 rounded-full border border-border bg-card px-4 py-1 font-mono text-xs text-accent-foreground">
           @RestController · open to work
@@ -61,7 +60,7 @@ export function Hero() {
           <a href="#contact" className="rounded-lg border border-primary/40 px-6 py-3 font-semibold text-primary transition-colors hover:bg-primary/10">
             Contact Me
           </a>
-          <a href="/CRRCLM.pdf" download="CRRCLM.pdf" className=" inline-flex items-center gap-2 rounded-lg border border-primary/40 px-6 py-3 font-semibold text-primary transition-colors hover:bg-primary/10">
+          <a href="/CRRCLM.pdf" download="CRRCLM.pdf" className="inline-flex items-center gap-2 rounded-lg border border-primary/40 px-6 py-3 font-semibold text-primary transition-colors hover:bg-primary/10">
              Download CV <FileDown size={18}/>
           </a>
         </div>
@@ -155,6 +154,28 @@ export function Projects() {
   );
 }
 
+export function Video() {
+  return (
+    <section id="video" className="mx-auto max-w-6xl scroll-mt-20 px-6 py-24">
+      <Reveal>
+        <SectionTitle kicker="04. video" title="Video" />
+        <div className="overflow-hidden rounded-2xl border border-border bg-card p-2 shadow-card">
+          <div className="relative aspect-video w-full overflow-hidden rounded-xl">
+            <video
+              className="h-full w-full object-cover"
+              controls
+              preload="metadata"
+            >
+              <source src="/videoport.mp4" type="video/mp4" />
+              Tu navegador no soporta el reproductor de video.
+            </video>
+          </div>
+        </div>
+      </Reveal>
+    </section>
+  );
+}
+
 export function Contact() {
   const social = [
     { label: "LinkedIn", href: profile.linkedin, Icon: Linkedin },
@@ -163,7 +184,7 @@ export function Contact() {
   return (
     <footer id="contact" className="scroll-mt-20 border-t border-border">
       <Reveal className="mx-auto max-w-3xl px-6 py-24 text-center">
-        <p className="font-mono text-sm text-primary">04. contact</p>
+        <p className="font-mono text-sm text-primary">05. contact</p>
         <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-5xl">Let's talk!</h2>
         <p className="mt-4 text-lg text-muted-foreground">I am open to new Junior/Trainee opportunities.</p>
         <div className="mt-10 flex justify-center gap-5">

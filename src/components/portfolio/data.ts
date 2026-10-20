@@ -1,10 +1,10 @@
-// ===== EDIT YOUR PERSONAL INFO HERE =====
+// ===== src/components/portfolio/data.ts =====
+
 export const profile = {
   name: "ManuelRod",
-  email: "mrodrigueznavarro360@gmail.com", // TODO: replace
-  github: "https://github.com/ManuelRodNav", // TODO: replace
+  email: "mrodrigueznavarro360@gmail.com",
+  github: "https://github.com/ManuelRodNav",
   linkedin: "https://www.linkedin.com/in/your-profile",
-   // TODO: replace
 };
 
 export const skills = [
@@ -13,13 +13,12 @@ export const skills = [
   { category: "Tools & Databases", items: ["PostgreSQL", "Git", "GitHub"] },
 ];
 
-// TODO: replace with your real projects
 export const projects = [
   {
     title: "Microservice Ticketing Backend",
     icon: "server",
     description:
-      "Microservices Ticketing Backend A scalable microservices ecosystem built with Java 21 and Spring Boot 4.0.5, designed for high-performance , efficient ticket reservation and event management.",
+      "Microservices Ticketing Backend A scalable microservices ecosystem built with Java 21 and Spring Boot 4.0.5, designed for high-performance, efficient ticket reservation and event management.",
     stack: ["Spring Boot", "PostgreSQL", "JWT", "JUnit"],
     repo: "https://github.com/ManuelRodNav/microservices-ticketing-backend",
   },
@@ -39,4 +38,4 @@ export const projects = [
     stack: ["Java", "JWT", "SpringBoot"],
     repo: "https://github.com/ManuelRodNav/BlogRepositorioSecurity",
   },
-] as const;
+];  
